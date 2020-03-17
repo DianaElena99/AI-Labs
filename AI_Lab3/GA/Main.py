@@ -74,7 +74,10 @@ if __name__ == '__main__':
     print(allBestFitnesses)
     print("Ultima solutie gasita ", allPotentialSolutionsX[-1])
     print("Sol with best fitness", best[min(allBestFitnesses)])
+    print("Nr comunit : ", len(Counter(best[min(allBestFitnesses)]).keys()))
     plot(best[min(allBestFitnesses)])
+    for i in range(network['NoNodes']):
+        print(i, " ", best[min(allBestFitnesses)][i])
     #plot(allPotentialSolutionsX[-1])
 
 
